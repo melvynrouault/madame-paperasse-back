@@ -9,11 +9,11 @@ export class MailService {
   // TODO: Change some datas (APIKEY, FROM) with env file
   async sendMail(userInfos: UserInfos) {
     const sgMail = require('@sendgrid/mail')
-    sgMail.setApiKey('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')
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     
     const msg = {
       to: 'melvyn.rouault@gmail.com', // Change to your recipient
-      from: 'madame.paperasse.rennes@gmail.com', // Change to your verified sender
+      from: process.env.SENDGRID_FROM, // Change to your verified sender
       subject: 'Email Confirmation',
       html: `Bonjour Madame paperasse! <br /> Une personne vous a envoyé un message via votre site internet en indiquant l'adresse mail suivante : ${userInfos.email}. <br /> Voici son message : ${userInfos.message}`,
     }
