@@ -12,7 +12,7 @@ export class MailService {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     
     const msg = {
-      to: 'melvyn.rouault@gmail.com', // Change to your recipient
+      to: process.env.SENDGRID_FROM, // Change to your recipient
       from: process.env.SENDGRID_FROM, // Change to your verified sender
       subject: 'Email Confirmation',
       html: `Bonjour Madame paperasse! <br /> Une personne vous a envoyé un message via votre site internet en indiquant l'adresse mail suivante : ${userInfos.email}. <br /> Voici son message : ${userInfos.message}`,
