@@ -18,14 +18,7 @@ import { MailService } from './mailer';
         },
       },
       defaults: {
-        from: '"Chope Ta Chope" <noreply@chope-ta-chope.com>',
-      },
-      template: {
-        dir: join(__dirname, 'templates'),
-        adapter: new HandlebarsAdapter(), // or new PugAdapter() or new EjsAdapter()
-        options: {
-          strict: true,
-        },
+        from: '"Madame Paperasse"',
       },
     }),
   ],
