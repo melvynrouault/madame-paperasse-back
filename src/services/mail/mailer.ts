@@ -15,7 +15,7 @@ export class MailService {
       to: 'melvyn.rouault@gmail.com', // Change to your recipient
       from: {
         email: process.env.SENDGRID_FROM, // Change to your verified sender
-        name: userInfos.email,
+        name: 'Demande d\'informations',
       },
       subject: 'Email Confirmation',
       html: `Bonjour Madame paperasse! <br /> Une personne vous a envoyé un message via votre site internet en indiquant l'adresse mail suivante : ${userInfos.email}. <br /> Voici son message : ${userInfos.message}`,
