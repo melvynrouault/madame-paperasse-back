@@ -1,7 +1,7 @@
 export interface UserInfos {
-    email: string,
-    message: string,
     names: string,
+    email: string,
     company: string,
     phoneNumber: string
+    message: string,
 }

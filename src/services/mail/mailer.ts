@@ -18,7 +18,8 @@ export class MailService {
         name: 'Demande d\'informations',
       },
       subject: 'Email Confirmation',
-      html: `Bonjour Madame paperasse! <br /> Une personne vous a envoyé un message via votre site internet en indiquant l'adresse mail suivante : ${userInfos.email}. <br /> Voici son message : ${userInfos.message}`,
+      html: `Bonjour Madame paperasse! <br /> ${userInfos.names} vous a envoyé un message via votre site internet en indiquant l'adresse mail suivante : ${userInfos.email}. <br /> Voici son message : ${userInfos.message} <br />
+      informations complentaires: <br /> Entreprise: ${userInfos.company} <br /> numéro de téléphone: ${userInfos.phoneNumber}`,
     }
     sgMail
       .send(msg)
