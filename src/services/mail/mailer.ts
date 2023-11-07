@@ -8,6 +8,7 @@ export class MailService {
 
   // TODO: Change some datas (APIKEY, FROM) with env file
   async sendMail(userInfos: UserInfos) {
+    console.log("mail function")
     const sgMail = require('@sendgrid/mail')
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     
